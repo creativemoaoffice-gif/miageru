@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0B1020"/>
+      <stop offset="1" stop-color="#1F2230"/>
+    </linearGradient>
+    <radialGradient id="lamp" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FFF1C9" stop-opacity="0.95"/>
+      <stop offset="0.25" stop-color="#FFC978" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#FFB25A" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bokeh" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FFD58A" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#FFB050" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hair" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3A2622"/>
+      <stop offset="0.6" stop-color="#22161A"/>
+      <stop offset="1" stop-color="#160E12"/>
+    </linearGradient>
+    <linearGradient id="knit" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#D9A266"/>
+      <stop offset="1" stop-color="#9C6534"/>
+    </linearGradient>
+    <linearGradient id="skin" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#F0C3A2"/>
+      <stop offset="1" stop-color="#C98F72"/>
+    </linearGradient>
+    <pattern id="rib" width="14" height="40" patternUnits="userSpaceOnUse" patternTransform="rotate(4)">
+      <path d="M7 0 Q3 10 7 20 Q11 30 7 40" fill="none" stroke="#7E4E26" stroke-width="2.5" opacity="0.45"/>
+    </pattern>
+    <radialGradient id="vig" cx="0.5" cy="0.5" r="0.75">
+      <stop offset="0.55" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0.6"/>
+    </radialGradient>
+    <filter id="blurBg"><feGaussianBlur stdDeviation="7"/></filter>
+    <filter id="blurMid"><feGaussianBlur stdDeviation="3.5"/></filter>
+    <filter id="soft"><feGaussianBlur stdDeviation="1.2"/></filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="3"/>
+      <feColorMatrix values="0 0 0 0 0.5  0 0 0 0 0.5  0 0 0 0 0.5  0 0 0 0.10 0"/>
+    </filter>
+  </defs>
+
+  <rect width="1000" height="1000" fill="url(#sky)"/>
+
+  <!-- blurred city -->
+  <g filter="url(#blurBg)">
+    <rect x="40" y="120" width="260" height="700" fill="#2A3042"/>
+    <rect x="320" y="40" width="230" height="760" fill="#1A1F2E"/>
+    <rect x="600" y="0" width="300" height="760" fill="#20253A"/>
+    <rect x="880" y="200" width="160" height="600" fill="#2A2E3E"/>
+    <g fill="#F7D58C" opacity="0.8">
+      <rect x="70" y="180" width="200" height="16"/><rect x="70" y="250" width="200" height="16"/>
+      <rect x="70" y="320" width="200" height="16"/><rect x="70" y="390" width="140" height="16"/>
+      <rect x="350" y="90" width="22" height="30"/><rect x="390" y="90" width="22" height="30"/>
+      <rect x="470" y="140" width="22" height="30"/><rect x="430" y="200" width="22" height="30"/>
+      <rect x="350" y="260" width="22" height="30"/><rect x="510" y="260" width="22" height="30"/>
+      <rect x="640" y="60" width="24" height="26"/><rect x="700" y="60" width="24" height="26"/>
+      <rect x="820" y="110" width="24" height="26"/><rect x="760" y="160" width="24" height="26"/>
+      <rect x="640" y="210" width="24" height="26"/><rect x="850" y="230" width="24" height="26"/>
+      <rect x="700" y="270" width="24" height="26"/><rect x="900" y="260" width="24" height="26"/>
+    </g>
+    <rect x="80" y="560" width="120" height="70" rx="6" fill="#1E7A4C"/>
+  </g>
+
+  <!-- autumn trees -->
+  <g filter="url(#blurMid)">
+    <g fill="#C8551F" opacity="0.9">
+      <ellipse cx="110" cy="560" rx="140" ry="110"/><ellipse cx="240" cy="640" rx="110" ry="90"/>
+      <ellipse cx="900" cy="560" rx="130" ry="120"/>
+    </g>
+    <g fill="#E89A2C" opacity="0.85">
+      <ellipse cx="60" cy="480" rx="90" ry="70"/><ellipse cx="200" cy="560" rx="80" ry="60"/>
+      <ellipse cx="860" cy="480" rx="90" ry="70"/><ellipse cx="960" cy="640" rx="70" ry="70"/>
+    </g>
+    <g fill="#8E2E1C" opacity="0.8">
+      <ellipse cx="160" cy="680" rx="90" ry="60"/><ellipse cx="820" cy="650" rx="80" ry="60"/>
+    </g>
+  </g>
+
+  <!-- street lamp + bokeh -->
+  <circle cx="820" cy="330" r="190" fill="url(#lamp)"/>
+  <g>
+    <circle cx="150" cy="300" r="40" fill="url(#bokeh)"/>
+    <circle cx="300" cy="420" r="28" fill="url(#bokeh)"/>
+    <circle cx="420" cy="180" r="34" fill="url(#bokeh)"/>
+    <circle cx="930" cy="160" r="36" fill="url(#bokeh)"/>
+    <circle cx="740" cy="120" r="24" fill="url(#bokeh)"/>
+    <circle cx="260" cy="760" r="30" fill="url(#bokeh)"/>
+  </g>
+
+  <!-- concrete wall -->
+  <g filter="url(#blurMid)">
+    <rect x="0" y="770" width="1000" height="230" fill="#4A4B52"/>
+    <rect x="0" y="770" width="1000" height="18" fill="#5E5F66"/>
+  </g>
+
+  <!-- person -->
+  <g filter="url(#soft)">
+    <!-- neck & cheek (looking left) -->
+    <path d="M470 330 C452 355 446 378 450 392 L440 404 C447 410 452 414 454 420
+             C456 445 470 462 495 470 L540 520 L540 330 Z" fill="url(#skin)"/>
+    <!-- sweater -->
+    <path d="M330 1000 C330 800 365 610 450 550 C520 505 640 505 715 545
+             C800 600 830 790 830 1000 Z" fill="url(#knit)"/>
+    <path d="M330 1000 C330 800 365 610 450 550 C520 505 640 505 715 545
+             C800 600 830 790 830 1000 Z" fill="url(#rib)"/>
+    <!-- sleeve seam / arm shading -->
+    <path d="M425 585 C395 680 390 820 400 1000" fill="none" stroke="#7E4E26" stroke-width="5" opacity="0.5"/>
+    <path d="M745 590 C770 690 780 820 775 1000" fill="none" stroke="#7E4E26" stroke-width="5" opacity="0.5"/>
+    <!-- rim light on sweater from lamp -->
+    <path d="M715 545 C800 600 830 790 830 1000" fill="none" stroke="#FFD08A" stroke-width="6" opacity="0.5"/>
+
+    <!-- long wavy hair -->
+    <path d="M565 250 C500 248 466 290 470 335 C475 380 488 420 494 470
+             C500 520 470 560 466 620 C462 670 440 700 448 750
+             C456 800 488 805 492 840 C520 860 548 830 572 852
+             C598 872 630 846 652 858 C690 862 708 820 698 790
+             C690 760 716 730 708 680 C700 630 712 590 700 540
+             C690 490 676 440 676 380 C676 320 650 252 565 250 Z" fill="url(#hair)"/>
+    <!-- strands / waves -->
+    <g fill="none" stroke-linecap="round">
+      <path d="M520 300 C500 380 520 450 510 540 C500 620 488 700 500 800" stroke="#4A322C" stroke-width="5" opacity="0.7"/>
+      <path d="M590 280 C600 380 575 470 590 560 C605 650 570 740 590 830" stroke="#4A322C" stroke-width="5" opacity="0.6"/>
+      <path d="M640 300 C660 400 640 500 665 590 C685 670 660 750 670 800" stroke="#5C4036" stroke-width="4" opacity="0.6"/>
+      <path d="M548 360 C540 470 556 560 545 660 C536 740 545 790 550 830" stroke="#120A0D" stroke-width="6" opacity="0.6"/>
+      <!-- lamp rim light on hair -->
+      <path d="M640 268 C668 300 672 360 676 420 C682 500 700 600 694 680" stroke="#E9B57E" stroke-width="5" opacity="0.55"/>
+      <path d="M545 262 Q600 250 640 275" stroke="#8C6250" stroke-width="10" opacity="0.6"/>
+    </g>
+  </g>
+
+  <rect width="1000" height="1000" fill="url(#vig)"/>
+  <rect width="1000" height="1000" filter="url(#grain)"/>
+</svg>
